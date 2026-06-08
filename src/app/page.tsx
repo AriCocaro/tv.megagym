@@ -7,9 +7,18 @@ export default function Home() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    fetch("/api/fotos")
+    fetch(
+      "https://script.google.com/macros/s/AKfycbwBIQ4B1GXJ62jpC2H1gUJfeAr6KVgtF-hHMTVEfbi2PcOHaFcW7eQPzpLsAiZG9iYHZg/exec"
+    )
       .then((res) => res.json())
-      .then((data) => setFotos(data));
+      .then((data) => {
+        const urls = data.map(
+          (foto: { nombre: string; url: string }) => foto.url
+        );
+
+        setFotos(urls);
+      })
+      .catch(console.error);
   }, []);
 
   useEffect(() => {
