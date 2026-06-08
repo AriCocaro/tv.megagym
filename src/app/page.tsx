@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbwBIQ4B1GXJ62jpC2H1gUJfeAr6KVgtF-hHMTVEfbi2PcOHaFcW7eQPzpLsAiZG9iYHZg/exec"
+      "https://script.google.com/macros/s/AKfycbwFiMAiT6w2Oha1or2OOwQBqE8RfRCtKrIaW5x19wG0sagNW-BAKABxezibXtheWwD9Dw/exec"
     )
       .then((res) => res.json())
       .then((data) => {
